@@ -17,8 +17,9 @@ end
 
 def get_english_meaning(file_path, emoticon)
   # code goes here
-  load_library(file_path).each do |meaning, emot|
-    if emoticon == load_library(file_path)[meaning][:japanese]
+  library = load_library(file_path)
+  library.each do |meaning, emot|
+    if emoticon == library[meaning][:japanese]
       return meaning
     else 
       return "Sorry not found"

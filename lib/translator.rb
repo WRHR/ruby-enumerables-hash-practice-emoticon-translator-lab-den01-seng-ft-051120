@@ -11,7 +11,7 @@ def load_library(file_path)
   }
   
   emoticons.each do |key, value|
-    library['get_emoticont'][value[0]] = emoticons[key][1]
+    library['get_emoticon'][value[0]] = emoticons[key][1]
     library['get_meaning'][value[1]] = key
   end
   library
